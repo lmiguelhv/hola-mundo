@@ -4,7 +4,7 @@ export default function Home() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('<API_ENDPOINT>')
+    fetch('hello-world')
       .then(response => response.json())
       .then(data => setMessage(data))
       .catch(error => console.error('Error:', error));
