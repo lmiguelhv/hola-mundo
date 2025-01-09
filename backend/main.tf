@@ -4,12 +4,12 @@ provider "aws" {
 
 resource "aws_lambda_function" "hello_world" {
   function_name = "hello-world"
-  filename      = "lambda_function\\lambda_function.zip"
+  filename      = "lambda_function/lambda_function.zip"
   handler       = "app.lambda_handler"
   runtime       = "python3.9"
   role          = aws_iam_role.lambda_exec.arn
 
-  source_code_hash = filebase64sha256("lambda_function\\lambda_function.zip")
+  source_code_hash = filebase64sha256("lambda_function/lambda_function.zip")
 
 }
 
